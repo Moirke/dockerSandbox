@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Sandbox</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f8fafc;
+    }
+
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    a.card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 1.25rem 1.5rem;
+      background: #1e2433;
+      border: 1px solid #2d3748;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    a.card:hover {
+      border-color: #4f6ef7;
+      background: #242b3d;
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f1f5f9;
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .card-url {
+      font-size: 0.75rem;
+      color: #4f6ef7;
+      margin-top: 0.25rem;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Docker Sandbox</h1>
+  <p class="subtitle">Local services running via Traefik</p>
+
+  <div class="grid">
+    <a class="card" href="http://portainer.localhost" target="_blank">
+      <div class="card-icon">🐳</div>
+      <div class="card-name">Portainer</div>
+      <div class="card-desc">Container management UI</div>
+      <div class="card-url">portainer.localhost</div>
+    </a>
+
+    <a class="card" href="http://dashboards.localhost" target="_blank">
+      <div class="card-icon">🔍</div>
+      <div class="card-name">OpenSearch Dashboards</div>
+      <div class="card-desc">Search & analytics UI</div>
+      <div class="card-url">dashboards.localhost</div>
+    </a>
+
+    <a class="card" href="http://traefik.localhost" target="_blank">
+      <div class="card-icon">🔀</div>
+      <div class="card-name">Traefik</div>
+      <div class="card-desc">Reverse proxy dashboard</div>
+      <div class="card-url">traefik.localhost</div>
+    </a>
+
+    <a class="card" href="http://ntopng.localhost" target="_blank">
+      <div class="card-icon">📡</div>
+      <div class="card-name">ntopng</div>
+      <div class="card-desc">Network traffic monitor</div>
+      <div class="card-url">ntopng.localhost</div>
+    </a>
+  </div>
+</body>
+</html>
